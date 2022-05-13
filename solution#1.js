@@ -8,9 +8,9 @@ while (roomOpen == false) {
     $("div.run-container").attr("id", "containerId")
     var id = $("div.run-container").children("button").attr('id');
     if (typeof attr !== 'undefined' && attr !== false) {
-        console.log("not yet, refreshing");
+        console.log("not open yet, refreshing");
         $("#main-content").load(window.location.href + " #main-content > *", "");
-        await Sleep(5000);
+        await Sleep(1000);
     }
     else {
         var speak = new SpeechSynthesisUtterance("Der Raum ist offen, es geht los!");
