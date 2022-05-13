@@ -1,4 +1,4 @@
-# digitalClassroom_autoRefresh
+## digitalClassroom_autoRefresh
 > **Careful**: This only works for digital classrooms from OPAL (Bildungsportal Sachsen).
 
 #### 1. Schritt: Einen beliebigen virtuellen Klassenraum auf OPAL heraussuchen.
