@@ -4,7 +4,7 @@ reloadTimer = setInterval(function() {
     $("div.run-container").attr("id", "containerId")
     var id = $("div.run-container").children("button").attr('id');
     if (typeof attr !== 'undefined' && attr !== false) {
-        console.log("not yet, refreshing");
+        console.log("not open yet, refreshing");
         document.getElementById("testFrame").src = document.getElementById("testFrame").src
     }
     else {
@@ -13,4 +13,4 @@ reloadTimer = setInterval(function() {
         speechSynthesis.speak(speak);
         clearInterval(reloadTimer);
     }
-}, 10000)
+}, 2000)
