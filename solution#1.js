@@ -2,8 +2,8 @@ function Sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
    }
  
-var roomOpen = false
-while (roomOpen == false) {
+var roomClosed = true;
+while (roomClosed) {
     var attr = $("div.run-container").children("button").attr('disabled');
     $("div.run-container").attr("id", "containerId")
     var id = $("div.run-container").children("button").attr('id');
@@ -16,6 +16,7 @@ while (roomOpen == false) {
         var speak = new SpeechSynthesisUtterance("Der Raum ist offen, es geht los!");
         speak.lang = "de-DE";
         speechSynthesis.speak(speak);
-        roomOpen = true;
+        roomClosed = false;
+        window.location.reload();
     }
 }
