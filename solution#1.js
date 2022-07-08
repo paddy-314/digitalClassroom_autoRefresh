@@ -12,7 +12,7 @@ while (roomClosed) {
         $("#main-content").load(window.location.href + " #main-content > *", "");
         await Sleep(1000);
     }
-    else {
+      else if (typeof attr == 'object' && attr == true){
         var speak = new SpeechSynthesisUtterance("Der Raum ist offen, es geht los!");
         speak.lang = "de-DE";
         speechSynthesis.speak(speak);
