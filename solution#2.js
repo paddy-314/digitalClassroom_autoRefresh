@@ -7,7 +7,7 @@ reloadTimer = setInterval(function() {
         console.log("not open yet, refreshing");
         document.getElementById("iFrame").src = document.getElementById("iFrame").src
     }
-    else if (typeof attr == 'object' && attr == true){ //make sure the object is loaded
+    else if (typeof attr == 'object'){ //make sure the object is loaded
         console.log(attr)
         var speak = new SpeechSynthesisUtterance("Der Raum ist offen, es geht los!");
         speak.lang = "de-DE";
