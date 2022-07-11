@@ -17,4 +17,7 @@ while (roomClosed) {
         roomClosed = false;
         window.location.reload();
     }
+    else{
+        await sleep(50)
+    }
 }
