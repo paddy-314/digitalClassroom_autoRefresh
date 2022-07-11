@@ -4,15 +4,13 @@ function Sleep(milliseconds) {
  
 var roomClosed = true;
 while (roomClosed) {
-    var attr = $("div.run-container").children("button").attr('disabled');
-    $("div.run-container").attr("id", "containerId")
-    var id = $("div.run-container").children("button").attr('id');
-    if (typeof attr !== 'undefined' && attr !== false) {
+    var button = $("div.run-container").children("button")
+    if (typeof button !== 'undefined' && button.attr('disabled') == 'disabled') {
         console.log("not open yet, refreshing");
         $("#main-content").load(window.location.href + " #main-content > *", "");
         await Sleep(1000);
     }
-      else if (typeof attr == 'object'){
+      else if (typeof button == 'object'){
         var speak = new SpeechSynthesisUtterance("Der Raum ist offen, es geht los!");
         speak.lang = "de-DE";
         speechSynthesis.speak(speak);
