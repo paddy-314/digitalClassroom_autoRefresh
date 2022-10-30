@@ -18,6 +18,6 @@ while (roomClosed) {
         window.location.reload();
     }
     else{
-        await sleep(50)
+        await Sleep(50)
     }
 }
